@@ -1,0 +1,107 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+
+\begin{document}
+\section*{Problem 1}
+In the polar coordinates, we have 
+\begin{align}
+x =& r \sin \theta \cos \phi, \cr
+y =& r \sin \theta \sin \phi, \cr
+z =& r \cos \theta.
+\end{align}
+And 
+\begin{align}
+dx = & \sin \theta \cos \phi ~dr + r \cos \theta \cos \phi ~d\theta - r \sin \theta \sin \phi ~d\phi, \cr
+dy = & \sin \theta \sin \phi ~dr + r \cos \theta \sin \phi ~d\theta+ r \sin \theta \cos \phi ~d\phi, \cr
+dz = & \cos \theta ~dr - r \sin \theta ~d\theta.
+\end{align}
+Therefore,
+\begin{align}
+ds^2 =& dt^2 - dx^2 - dy^2 - dz^2\cr
+=& dt^2 - (\sin \theta \cos \phi ~dr + r \cos \theta \cos \phi ~d\theta - r \sin \theta \sin \phi ~d\phi)^2\cr
+&-(\sin \theta \sin \phi ~dr + r \cos \theta \sin \phi ~d\theta+ r \sin \theta \cos \phi ~d\phi)^2\cr
+&-(\cos \theta ~dr - r \sin \theta ~d\theta)^2\cr
+=& dt^2 - dr^2 - r^2~d\theta^2 - r^2 \sin^2\theta ~d\phi^2.
+\end{align}
+So, the induced metric,
+\begin{equation}
+g' = \begin{pmatrix}1 & 0 & 0 & 0\\ 0 & -1 & 0 & 0\\ 0 & 0 & -r^2 & 0\\ 0 & 0 & 0 & -r^2\sin^2\theta\end{pmatrix}.
+\end{equation}
+
+
+\section*{Problem 2}
+\subsection*{1. Christoffel symbols are not components of a tensor}
+Suppose we have two different local coordinates $\{x^\mu\}, \{y^\mu\}$ whose bases are $\{e_\mu\}=\{\partial/\partial x^\mu\}$ and $\{f_\mu\}=\{\partial/\partial y^\mu\}$ respectively. Denote the Christoffel symbols with respect to $y$-coordinates by $\widetilde{\Gamma}^\mu_{~\alpha\beta}$. The basis vector $f_\mu$ satisfies
+\begin{equation}
+\nabla_{f_\alpha} f_\beta = \widetilde{\Gamma}^\mu_{~\alpha \beta}f_\mu.
+\end{equation}
+If we write $f_\alpha = (\partial x^\sigma/ \partial y^\alpha)e_\sigma$, $f_\beta = (\partial x^\rho/ \partial y^\beta)e_\rho$, the LHS becomes
+\begin{align}
+\nabla_{f_\alpha} f_\beta =& \nabla_{f_\alpha}(\frac{\partial{x^\rho}}{\partial{y^\beta}}e_\rho)
+=\frac{\partial^2 x^\rho}{\partial y^\alpha \partial y^\beta}e_\rho+\frac{\partial x^\sigma}{\partial y^\alpha}\frac{\partial x^\rho}{\partial y^\beta}\nabla_{e_\sigma}e_\rho\cr
+=&\left(\frac{\partial^2 x^\nu}{\partial y^\alpha \partial y^\beta} + \frac{\partial x^\sigma}{\partial y^\alpha}\frac{\partial x^\rho}{\partial y^\beta} \Gamma^\nu_{~\sigma \rho} \right)e_\nu.
+\end{align}
+Since the RHS of (5) is equal to $\widetilde{\Gamma}^\mu_{~\alpha\beta} (\partial x^\nu / \partial y^\mu)e_\nu$, the Christoffel symbols must transform as
+\begin{equation}
+\widetilde{\Gamma}^\mu_{~\alpha\beta} = \frac{\partial x^\sigma}{\partial y^\alpha}\frac{\partial x^\rho}{\partial y^\beta} \frac{\partial y^\mu}{\partial x^\nu}\Gamma^\nu_{~\sigma \rho}
++\frac{\partial^2 x^\nu}{\partial y^\alpha \partial y^\beta} \frac{\partial y^\mu}{\partial x^\nu}.\end{equation}
+Therefore, Christoffel symbols are not components of a tensor.
+
+\subsection*{2. Christoffel symbols of Minkowski metric vanish}
+Since the Christoffel symbols only involve the derivatives of the metric. The Minkowski metric is a constant metric, so its Christoffel symbols vanish.
+
+\subsection*{3. Christoffel symbols in polar coordinates}
+Recall the definition of the Christoffel symbols,
+\begin{equation}
+\Gamma^\mu_{~\alpha\beta} = \frac{1}{2} g^{\mu \nu}
+\left(
+\frac{\partial g_{\nu\alpha}}{\partial x^\beta} 
++ \frac{\partial g_{\beta \nu}}{\partial x^\alpha}
+- \frac{\partial g_{\alpha \beta}}{\partial x^\nu}
+\right).
+\end{equation}
+Using metric in (4), after some calculation, we can easily get,
+\begin{align}
+\Gamma^r_{~\theta\theta} = -r,  \quad \Gamma^r_{~\phi \phi} = -r \sin^2 \theta, \quad \Gamma^\theta_{~\phi \phi} = -\sin \theta \cos \theta,\cr
+\Gamma^\theta_{~r\theta}=\Gamma^\theta_{~\theta r} = \frac{1}{r}, \quad
+\Gamma^\phi_{~r \phi}= \Gamma^\phi_{~\phi r} = \frac{1}{r}, \quad
+\Gamma^\phi_{~\theta \phi} = \Gamma^\phi_{~\phi \theta}=\cot \theta. 
+\end{align}
+
+
+
+\section*{Problem 3}
+The metric in polar coordinates is given by
+\begin{equation}
+g_{\mu\nu} = 
+\begin{pmatrix}
+e^{N(r)} & 0 & 0 & 0 \\
+0 & e^{-L(r)} & 0 & 0 \\
+0 & 0 & -r^2 & 0 \\
+0 & 0 & 0 & -r^2 \sin^2 \theta
+\end{pmatrix}.
+\end{equation}
+Its inverse
+\begin{equation}
+g^{\mu\nu} = 
+\begin{pmatrix}
+e^{-N(r)} & 0 & 0 & 0 \\
+0 & e^{L(r)} & 0 & 0 \\
+0 & 0 & -\frac{1}{r^2} & 0 \\
+0 & 0 & 0 & -\frac{1}{r^2 \sin^2 \theta}
+\end{pmatrix}.
+\end{equation}
+After some calculation, we can get the Christoffel symbols as
+\begin{align}
+\Gamma^r_{~tt}=-\frac{1}{2} e^{N(r) + L(r)}N'(r), \quad 
+\Gamma^r_{~rr}=-\frac{1}{2} L'(r), \quad
+\Gamma^r_{~\theta\theta} = r e^{L(r)}, \cr
+\Gamma^r_{~\phi\phi}= r \sin^2\theta e^{L(r)}, \quad
+\Gamma^\theta_{~\phi\phi} = -\sin\theta \cos \theta, \quad
+\Gamma^t_{~tr} = \Gamma^t_{~rt}=\frac{1}{2}N'(r),\cr
+\Gamma^\theta_{~r \theta}=\Gamma^\theta_{~\theta r}=\frac{1}{r},\quad
+\Gamma^\phi_{~r\phi}=\Gamma^\phi_{~\phi r} = \frac{1}{r},\quad
+\Gamma^\phi_{~\theta \phi}=\Gamma^\phi_{~\phi \theta}=\cot \theta.
+\end{align}
+\end{document}
