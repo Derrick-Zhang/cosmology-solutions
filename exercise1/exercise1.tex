@@ -104,4 +104,294 @@ After some calculation, we can get the Christoffel symbols as
 \Gamma^\phi_{~r\phi}=\Gamma^\phi_{~\phi r} = \frac{1}{r},\quad
 \Gamma^\phi_{~\theta \phi}=\Gamma^\phi_{~\phi \theta}=\cot \theta.
 \end{align}
+
+
+\section*{Problem 4}
+\subsection*{1. covariant derivative of vectors}
+The covariant derivative of a vector is defined as 
+\begin{equation}
+A^\mu_{~;\beta} = \frac{\partial A^\mu}{\partial x^\beta}+\Gamma^\mu_{~\alpha \beta}A^\alpha.
+\end{equation}
+Suppose we have two different local coordinates $\{x^\mu\}$, $\{y^\mu\}$. Denote the vector components and the Christoffel symbols with respect to $y$-coordinates by $\widetilde{A}^\mu$ and $\widetilde{\Gamma}^\mu_{~\alpha \beta}$. They transform as
+\begin{equation}
+\widetilde{A}^\mu = \frac{\partial y^\mu}{\partial x^\nu} A^\nu,\quad
+\widetilde{\Gamma}^\mu_{~\alpha\beta} = \frac{\partial x^\sigma}{\partial y^\alpha}\frac{\partial x^\rho}{\partial y^\beta} \frac{\partial y^\mu}{\partial x^\nu}\Gamma^\nu_{~\sigma \rho}
++\frac{\partial^2 x^\nu}{\partial y^\alpha \partial y^\beta} \frac{\partial y^\mu}{\partial x^\nu}.
+\end{equation}
+First, we derive an alternative equation for the transformation law of Christoffel symbols. Using chain rule,
+\begin{equation}
+\frac{\partial y^\mu}{\partial x^\nu}\frac{\partial x^\nu}{\partial y^\alpha} = \frac{\partial y^\mu}{\partial y^\alpha}= \delta^\mu_\alpha.
+\end{equation}
+Since the Kronecker delta doesn't depend on the local coordinate.
+We have
+\begin{equation}
+\frac{\partial}{\partial y^\beta}\left(\frac{\partial y^\mu}{\partial x^\nu}\frac{\partial x^\nu}{\partial y^\alpha} \right)=0.
+\end{equation}
+Now using Leibniz rule,
+\begin{equation}
+\frac{\partial^2 y^\mu}{\partial y^\beta\partial x^\nu}\frac{\partial x^\nu}{\partial y^\alpha}
++ \frac{\partial y^\mu}{\partial x^\nu}\frac{\partial^2 x^\nu}{\partial y^\alpha \partial y^\beta}=0,
+\end{equation}
+or 
+\begin{equation}
+\frac{\partial y^\mu}{\partial x^\nu}\frac{\partial^2 x^\nu}{\partial y^\alpha \partial y^\beta}=
+-\frac{\partial^2 y^\mu}{\partial y^\beta\partial x^\nu}\frac{\partial x^\nu}{\partial y^\alpha}=-\frac{\partial x^\rho}{\partial y^\beta}\frac{\partial^2 y^\mu}{\partial x^\rho\partial x^\nu}\frac{\partial x^\nu}{\partial y^\alpha}.
+\end{equation}
+Therefore, the Christoffel symbols transform as
+\begin{equation}
+\widetilde{\Gamma}^\mu_{~\alpha\beta} = \frac{\partial x^\sigma}{\partial y^\alpha}\frac{\partial x^\rho}{\partial y^\beta} \frac{\partial y^\mu}{\partial x^\nu}\Gamma^\nu_{~\sigma \rho}
+-\frac{\partial x^\rho}{\partial y^\beta}\frac{\partial^2 y^\mu}{\partial x^\rho\partial x^\nu}\frac{\partial x^\nu}{\partial y^\alpha}.
+\end{equation}
+Now, the ordinary derivative transforms as 
+\begin{align}
+\frac{\partial \widetilde{A}^\mu}{\partial y^\beta} =& \frac{\partial x^\rho}{\partial y^\beta}\frac{\partial}{\partial x^\rho}\left(\frac{\partial y^\mu}{\partial x^\nu} A^\nu\right)\cr
+=&\left(\frac{\partial x^\rho}{\partial y^\beta}\frac{\partial y^\mu}{\partial x^\nu}\right)\frac{\partial A^\nu}{\partial x^\rho}
++\frac{\partial x^\rho}{\partial y^\beta}\frac{\partial^2 y^\mu}{\partial x^\rho \partial x^\nu} A^\nu.
+\end{align}
+The rest part transform as
+\begin{align}
+\widetilde{\Gamma}^\mu_{~\alpha\beta} \widetilde{A}^\alpha
+=&\left(\frac{\partial x^\sigma}{\partial y^\alpha}\frac{\partial x^\rho}{\partial y^\beta} \frac{\partial y^\mu}{\partial x^\nu}\Gamma^\nu_{~\sigma \rho}
+-\frac{\partial x^\rho}{\partial y^\beta}\frac{\partial^2 y^\mu}{\partial x^\rho\partial x^\nu}\frac{\partial x^\nu}{\partial y^\alpha}\right)
+\left(\frac{\partial y^\alpha}{\partial x^\tau} A^\tau\right)\cr
+=&\left(\frac{\partial x^\rho}{\partial y^\beta}\frac{\partial y^\mu}{\partial x^\nu}\right)\Gamma^\nu_{~ \sigma \rho}A^\sigma
+-\frac{\partial x^\rho}{\partial y^\beta}\frac{\partial^2 y^\mu}{\partial x^\rho\partial x^\nu}A^\nu.
+\end{align}
+Adding them up yields
+\begin{equation}
+\frac{\partial \widetilde{A}^\mu}{\partial y^\beta} 
++\widetilde{\Gamma}^\mu_{~\alpha\beta} \widetilde{A}^\alpha 
+=\left(\frac{\partial x^\rho}{\partial y^\beta}\frac{\partial y^\mu}{\partial x^\nu}\right)\left(\frac{\partial A^\nu}{\partial x^\rho}
++\Gamma^\nu_{~ \sigma \rho}A^\sigma\right).
+\end{equation}
+Therefore, the covariant derivative of vectors transform like tensors.
+
+\subsection*{2. contravariant derivatives of vectors}
+The contravariant derivative of a vector is defined as
+\begin{equation}
+B_{\mu;\beta}=\frac{\partial B_\mu}{\partial x^\beta}-\Gamma^\alpha_{~\mu \beta}B_\alpha.
+\end{equation}
+We have 
+\begin{equation}
+\widetilde{B}_\mu = \frac{\partial x^\nu}{\partial y^\mu}B_\nu,\quad
+\widetilde{\Gamma}^\alpha_{~\mu\beta} = \frac{\partial x^\sigma}{\partial y^\mu}\frac{\partial x^\rho}{\partial y^\beta} \frac{\partial y^\alpha}{\partial x^\nu}\Gamma^\nu_{~\sigma \rho}
++\frac{\partial^2 x^\nu}{\partial y^\mu \partial y^\beta} \frac{\partial y^\alpha}{\partial x^\nu}.
+\end{equation}
+The ordinary derivative transforms as
+\begin{align}
+\frac{\partial \widetilde{B}_\mu}{\partial y^\beta}
+=&\frac{\partial x^\rho}{\partial y^\beta}\frac{\partial}{\partial x^\rho}
+\left(
+\frac{\partial x^\sigma}{\partial y^\mu}B_\sigma
+\right)\cr
+=&\left(\frac{\partial x^\rho}{\partial y^\beta}\frac{\partial x^\sigma}{\partial y^\mu}\right)\frac{\partial B_\sigma}{\partial x^\rho}
++\frac{\partial^2 x^\sigma}{\partial y^\beta \partial y^\mu}B_\sigma.
+\end{align}
+The rest part transforms as
+\begin{align}
+-\widetilde{\Gamma}^\alpha_{~\mu \beta}\widetilde{B}_\alpha
+=&-\left(\frac{\partial x^\sigma}{\partial y^\mu}\frac{\partial x^\rho}{\partial y^\beta} \frac{\partial y^\alpha}{\partial x^\nu}\Gamma^\nu_{~\sigma \rho}
++\frac{\partial^2 x^\nu}{\partial y^\mu \partial y^\beta} \frac{\partial y^\alpha}{\partial x^\nu}\right)
+\left(
+\frac{\partial x^\tau}{\partial y^\alpha}B_\tau
+\right)\cr
+=&-\left(\frac{\partial x^\sigma}{\partial y^\mu}\frac{\partial x^\rho}{\partial y^\beta}\right)\Gamma^\nu_{~\sigma \rho}B_\nu
+-\frac{\partial^2 x^\nu}{\partial y^\mu \partial y^\beta}B_\nu.
+\end{align}
+Adding them up yields
+\begin{equation}
+\frac{\partial \widetilde{B}_\mu}{\partial y^\beta}-\widetilde{\Gamma}^\alpha_{~\mu \beta}\widetilde{B}_\alpha
+= \left(\frac{\partial x^\rho}{\partial y^\beta}\frac{\partial x^\sigma}{\partial y^\mu}\right)
+\left(\frac{\partial B_\sigma}{\partial x^\rho}-\Gamma^\nu_{~\sigma \rho}B_\nu\right).
+\end{equation}
+Therefore, the contravariant derivatives of vectors also transform like tensors.
+
+
+
+\section*{Problem 5}
+\begin{align}
+g^{\mu\nu}_{~~;\beta} =& \frac{\partial g^{\mu\nu}}{\partial x^\beta}
++\Gamma^\mu_{~\alpha\beta}g^{\alpha \nu}
++\Gamma^\nu_{~\alpha\beta}g^{\mu \alpha}\cr
+= &  \frac{\partial g^{\mu\nu}}{\partial x^\beta}
++ \frac{1}{2} g^{\mu \rho}
+\left(
+\frac{\partial g_{\alpha \rho}}{\partial x^\beta}
++\frac{\partial g_{\rho \beta}}{\partial x^\alpha}
+-\frac{\partial g_{\alpha \beta}}{\partial x^\rho}
+\right) g^{\alpha \nu}\cr
+&+\frac{1}{2} g^{\nu \rho}
+\left(
+\frac{\partial g_{\alpha \rho}}{\partial x^\beta}
++\frac{\partial g_{\rho \beta}}{\partial x^\alpha}
+-\frac{\partial g_{\alpha \beta}}{\partial x^\rho}
+\right) g^{\alpha \mu}.
+\end{align}
+Since $\alpha$ and $\rho$ are dumb indices, interchange them in the third term and obtain
+\begin{align}
+g^{\mu\nu}_{~~;\beta} 
+= &  \frac{\partial g^{\mu\nu}}{\partial x^\beta}
++ \frac{1}{2} g^{\mu \rho}
+\left(
+\frac{\partial g_{\alpha \rho}}{\partial x^\beta}
++\frac{\partial g_{\rho \beta}}{\partial x^\alpha}
+-\frac{\partial g_{\alpha \beta}}{\partial x^\rho}
+\right) g^{\alpha \nu}\cr
+&+\frac{1}{2} g^{\nu \alpha}
+\left(
+\frac{\partial g_{\rho \alpha}}{\partial x^\beta}
++\frac{\partial g_{\alpha \beta}}{\partial x^\rho}
+-\frac{\partial g_{\rho\beta}}{\partial x^\alpha}
+\right) g^{\rho \mu}\cr
+=& \frac{\partial g^{\mu\nu}}{\partial x^\beta}
++ g^{\mu \rho} g^{\alpha \nu} \frac{\partial g_{\alpha \rho}}{\partial x^\beta}.
+\end{align}
+Since $\delta^\nu_\rho = g_{\rho \alpha} g^{\alpha \nu}$, we have
+\begin{equation}
+\frac{\partial}{\partial x^\beta}\left(g_{\rho \alpha} g^{\alpha \nu}\right)
+=g^{\alpha \nu}\frac{\partial g_{\rho \alpha}}{\partial x^\beta}
++g_{\rho \alpha}\frac{\partial g^{\alpha \nu}}{\partial x^\beta}
+=0.
+\end{equation}
+Therefore 
+\begin{equation}
+g^{\mu \nu}_{~~;\beta}=\frac{\partial g^{\mu \nu}}{\partial x^\beta}
+-g^{\mu \rho}g_{\rho \alpha}\frac{\partial g^{\alpha \nu}}{\partial x^\beta}
+=\frac{\partial g^{\mu \nu}}{\partial x^\beta}
+-\delta^\mu_\alpha\frac{\partial g^{\alpha \nu}}{\partial x^\beta}
+=0.
+\end{equation}
+
+Similarly, 
+\begin{align}
+g_{\mu \nu;\beta} =& \frac{\partial g_{\mu\nu}}{\partial x^\beta}
+-\Gamma^\alpha_{~\mu\beta}g_{\alpha \nu}
+-\Gamma^\alpha_{~\nu\beta}g_{\mu\alpha}\cr
+=&\frac{\partial g_{\mu\nu}}{\partial x^\beta}
+-\frac{1}{2}g^{\alpha \rho}
+\left(
+\frac{\partial g_{\rho \beta}}{\partial x^\mu}
++\frac{\partial g_{\mu \rho}}{\partial x^\beta}
+-\frac{\partial g_{\mu\beta}}{\partial x^\rho}
+\right)
+g_{\alpha \nu}\cr
+&-\frac{1}{2}g^{\alpha \rho}
+\left(
+\frac{\partial g_{\rho \beta}}{\partial x^\nu}
++\frac{\partial g_{\nu \rho}}{\partial x^\beta}
+-\frac{\partial g_{\nu\beta}}{\partial x^\rho}
+\right)
+g_{\alpha \mu}\cr
+=&\frac{\partial g_{\mu\nu}}{\partial x^\beta}
+-\frac{1}{2}\delta^{\rho}_{ \nu}
+\left(
+\frac{\partial g_{\rho \beta}}{\partial x^\mu}
++\frac{\partial g_{\mu \rho}}{\partial x^\beta}
+-\frac{\partial g_{\mu\beta}}{\partial x^\rho}
+\right)\cr
+&-\frac{1}{2}\delta^{\rho}_{\mu}
+\left(
+\frac{\partial g_{\rho \beta}}{\partial x^\nu}
++\frac{\partial g_{\nu \rho}}{\partial x^\beta}
+-\frac{\partial g_{\nu\beta}}{\partial x^\rho}
+\right)
+=0.
+\end{align}
+
+
+
+\section*{Problem 6}
+\subsection*{1. properties of Riemann tensor}
+Riemann tensor is given by
+\begin{equation}
+R^\alpha_{~\beta \mu\nu} = \Gamma^\alpha_{~\beta \nu, \mu}
+-\Gamma^\alpha_{~ \beta\mu,\nu}
++\Gamma^\sigma_{~\beta\nu}\Gamma^\alpha_{~\sigma\mu}
+-\Gamma^\sigma_{~\beta \mu}\Gamma^\alpha_{~\sigma \nu}.
+\end{equation}
+We lower the first index
+\begin{align}
+R_{\alpha \beta \mu \nu}=& g_{\alpha \tau}R^\tau_{~\beta \mu \nu}\cr
+=& g_{\alpha \tau}\Gamma^\tau_{~\beta \nu,\mu}
+-g_{\alpha \tau}\Gamma^\tau_{~\beta \mu,\nu}
++g_{\alpha \tau}\Gamma^\sigma_{~\beta\nu}\Gamma^\tau_{~\sigma\mu}
+-g_{\alpha \tau}\Gamma^\sigma_{~\beta \mu}\Gamma^\tau_{~\sigma \nu}.
+\end{align}
+Also, in a local inertial frame, the curvature can vanish, though its derivative doesn't vanish. So we can ignore the last two terms in (34) and further expand (34) as
+\begin{align}
+R_{\alpha \beta \mu \nu} =& \frac{1}{2}\partial_\mu(\partial_\beta g_{\alpha \nu}+ \partial_\nu g_{\beta\alpha}-\partial_\alpha g_{\beta \nu})
+-\frac{1}{2}\partial_\nu(\partial_\beta g_{\alpha \mu}+ \partial_\mu g_{\beta\alpha}-\partial_\alpha g_{\beta \mu})\cr
+=&\frac{1}{2}(\partial_\mu\partial_\beta g_{\alpha \nu}
+-\partial_\mu \partial_\alpha g_{\beta \nu}-\partial_\nu\partial_\beta g_{\alpha \mu}+\partial_\nu\partial_\alpha g_{\beta \mu})\cr
+\end{align}
+Then, it's easy to see that 
+\begin{align}
+R_{\alpha \beta \mu \nu} = -R_{\alpha \beta \nu \mu},
+\quad R_{\alpha\beta\mu\nu} = -R_{\beta\alpha\mu\nu}, \cr
+R_{\alpha \beta \mu \nu}= R_{\mu \nu \alpha \beta},
+\quad R_{\alpha \beta \mu \nu}+ R_{\alpha \mu \nu \beta}+R_{\alpha \nu \beta \mu}=0.
+\end{align}
+
+\subsection*{2. Independent components in 4-dimensional spacetime}
+Consider the tensor $R_{\alpha \beta \mu \nu}$ in general $n$-dimensional spacetime, since the tensor is antisymmetric in the first two indices, then the choice of $\alpha$ and $\beta$ is limited to $n(n-1)/2$. Similarly, the choice of $\mu$ and $\nu$ is also $n(n-1)/2$. Since the Riemann tensor is symmetric under the exchange of the pair of indices. So we can calculate the independent components as
+\begin{equation}
+\frac{1}{2}\left(\frac{1}{2}n(n-1)\right)\left(\frac{1}{2}n(n-1)+1\right)
+=\frac{1}{8}(n^4-2n^3 +3n^2-2n).
+\end{equation}
+However, we haven't considered the cyclic identity $R_{\alpha [\beta \mu \nu]}=0$. A consequence of this identity is that the totally antisymmetric part of the Riemann tensor vanishes 
+\begin{equation}
+R_{[\alpha \beta  \mu \nu]}=0.
+\end{equation}
+In fact, this equation, plus other identities, are enough to imply the cyclic identity. So we only need to consider this equation instead. The number of independent components of a totally antisymmetric 4-index tensor is $n(n-1)(n-2)(n-3)/4!$. So we are left with 
+\begin{equation}
+\frac{1}{8}(n^4-2n^3 +3n^2-2n) - \frac{1}{24}n(n-1)(n-2)(n-3)=\frac{1}{12}n^2(n^2-1)
+\end{equation}
+independent components of the Riemann tensor.
+Now, plug in $n=4$ and we get 20 independent components in 4-dimensional spacetime.
+
+\subsection*{3. Independent components in 2d and 3d}
+Since we have obtained the formula for general $n$-dimensional spacetime, we can see that there are 6 independent components in 3d and only 1 independent component in 2d.
+
+
+\section*{Problem 7}
+For a covariant vector $B_\alpha$, the parallel transport from $P$ to $P_1$ is 
+\begin{equation}
+B_\alpha - \Gamma^\beta_{\alpha\mu}(P)B_\beta d\xi^\mu.
+\end{equation}
+The parallel transport form $P_1$ tp $P'$ is 
+\begin{equation}
+B_\alpha - \Gamma^\beta_{\alpha\mu}(P)B_\beta d\xi^\mu
+-\Gamma^\sigma_{\alpha \nu}(P_1)(B_\sigma-\Gamma^\beta_{\alpha\mu}(P)B_\beta d\xi^\mu)d \zeta^\nu.
+\end{equation}
+Since  $\Gamma^\sigma_{\alpha \nu}(P_1) = \Gamma^\sigma_{\alpha \nu}(P) + \Gamma^\sigma_{\alpha \nu, \mu}(P)d \xi^\mu $,
+neglecting third order terms, we obtain
+\begin{equation}
+B_\alpha - \Gamma^\beta_{\alpha\mu}B_\beta d\xi^\mu
+-\Gamma^\sigma_{\alpha \nu}B_\sigma d\zeta^\nu
++\Gamma^\sigma_{\alpha \nu}\Gamma^\beta_{\alpha\mu}B_\beta d\xi^\mu d \zeta^\nu
+- \Gamma^\sigma_{\alpha \nu, \mu}B_\sigma d \xi^\mu d \zeta^\nu.
+\end{equation}
+Repeating the same procedure, passing first through $P_2$ and then through $P_1$, we obtain
+\begin{equation}
+B_\alpha - \Gamma^\beta_{\alpha\mu}B_\beta d\zeta^\mu
+-\Gamma^\sigma_{\alpha \nu}B_\sigma d\xi^\nu
++\Gamma^\sigma_{\alpha \nu}\Gamma^\beta_{\alpha\mu}B_\beta d\zeta^\mu d \xi^\nu
+- \Gamma^\sigma_{\alpha \nu, \mu}B_\sigma d \zeta^\mu d \xi^\nu.
+\end{equation}
+Subtracting the two quantities, we find
+\begin{equation}
+(\Gamma^\beta_{\alpha \mu, \nu}
+- \Gamma^\beta_{\alpha \nu, \mu}
++\Gamma^\sigma_{\alpha \nu}\Gamma^\beta_{\alpha\mu}
+-\Gamma^\sigma_{\alpha \mu}\Gamma^\beta_{\alpha\nu}  )
+B_\beta
+d \xi^\mu d \zeta^\nu .
+\end{equation}
+Therefore,
+\begin{equation}
+\Delta B_\alpha = R^\beta_{~\alpha \nu \mu}B_\beta d \xi^\mu d \zeta^\nu = R_{\alpha~\mu\nu}^{~\beta}B_\beta d \xi^\mu d \zeta^\nu.
+\end{equation}
+
+
+
 \end{document}
