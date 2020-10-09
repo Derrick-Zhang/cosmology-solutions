@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1602163168 "/Users/zhanghao/Documents/cosmology-solutions/exercise2/exercise2.tex" "/Users/zhanghao/Documents/cosmology-solutions/exercise2/exercise2.pdf" "exercise2" 1602163169
-  "/Users/zhanghao/Documents/cosmology-solutions/exercise2/exercise2.aux" 1602163168 8 a94a2480d3289e625eea47cd1b285758 ""
-  "/Users/zhanghao/Documents/cosmology-solutions/exercise2/exercise2.tex" 1602163167 1012 41fe95409b5e5f726daebe27d34cc5da ""
+["pdflatex"] 1602226167 "/Users/zhanghao/Documents/cosmology-solutions/exercise2/exercise2.tex" "/Users/zhanghao/Documents/cosmology-solutions/exercise2/exercise2.pdf" "exercise2" 1602226169
+  "/Users/zhanghao/Documents/cosmology-solutions/exercise2/exercise2.aux" 1602226169 35 119adba390c232fe18da7b4ccccf66ca ""
+  "/Users/zhanghao/Documents/cosmology-solutions/exercise2/exercise2.tex" 1602226167 2738 af8f6a0f35b94bd30a778d50fb110e3c ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -25,11 +25,11 @@
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1586288239 4811913 0be9a7e86c70a26e5e3042966bcd7097 ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1599738782 2432466 06b0e1210b4a1102dc237263766b54ae ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
-  "exercise2.aux" 1602163168 8 a94a2480d3289e625eea47cd1b285758 "pdflatex"
-  "exercise2.tex" 1602163167 1012 41fe95409b5e5f726daebe27d34cc5da ""
+  "exercise2.aux" 1602226169 35 119adba390c232fe18da7b4ccccf66ca "pdflatex"
+  "exercise2.tex" 1602226167 2738 af8f6a0f35b94bd30a778d50fb110e3c ""
   (generated)
   "/Users/zhanghao/Documents/cosmology-solutions/exercise2/exercise2.pdf"
-  "/Users/zhanghao/Documents/cosmology-solutions/exercise2/exercise2.log"
   "exercise2.aux"
-  "exercise2.log"
   "exercise2.pdf"
+  "exercise2.log"
+  "/Users/zhanghao/Documents/cosmology-solutions/exercise2/exercise2.log"

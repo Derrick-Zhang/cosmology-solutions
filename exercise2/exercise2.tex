@@ -30,4 +30,61 @@ In the weak field limit, $V$ is very small and we have
 \begin{equation}
     \Gamma^i_{~00} = \Gamma^0_{i0} = \partial_iV.
 \end{equation}
+
+
+
+\section*{Problem 2}
+We have to show that 
+\begin{equation} 
+    \label{toprove}
+    \Gamma^\mu_{~\mu \alpha} = (\log \sqrt{-g})_{,\alpha}.
+\end{equation}
+The determinant is given by
+\begin{equation}
+    g = \sum_\mu g_{\mu \nu} \Delta^{\mu \nu},
+\end{equation}
+where $\Delta^{\mu\nu}$ is the algebraic cofactor and the summation
+is only summed over $\mu$. The inverse of $g_{\mu \nu}$ is related 
+to the algebraic cofactor by
+\begin{equation}
+    g^{\mu \nu} = \frac{\Delta^{\mu \nu}}{g}.
+\end{equation}
+Therefore,
+\begin{equation}
+    \frac{\partial g}{\partial g_{\mu \nu}} = \Delta^{\mu \nu} = g g^{\mu \nu}.
+\end{equation}
+The R.H.S of (6) equals
+\begin{equation}
+    \frac{\partial \log \sqrt{-g}}{\partial g} \frac{\partial g}{\partial x^\alpha} 
+    = \frac{1}{2g} \frac{\partial g}{\partial x^\alpha}
+    = \frac{1}{2g} \frac{\partial g}{\partial g_{\mu \nu}}\frac{\partial g_{\mu \nu}}{\partial x^\alpha}
+    =\frac{1}{2}g^{\mu \nu} \frac{\partial g_{\mu \nu}}{\partial x^\alpha}.
+\end{equation}
+By definition, the L.H.S of (6) is 
+\begin{equation}
+    \Gamma^\mu_{~\mu \alpha} = \frac{1}{2} g^{\mu \nu} 
+    \left(
+        \frac{\partial g_{\nu \alpha}}{\partial x^\mu} 
+        + \frac{\partial g_{\mu \nu}}{\partial x^\alpha}
+        -\frac{\partial g_{\mu \alpha}}{\partial x^\nu}
+    \right)
+    =\frac{1}{2}g^{\mu \nu} \frac{\partial g_{\mu \nu}}{\partial x^\alpha}.
+\end{equation}
+In the last step, the first term cancels the last term because both $\mu$, $\nu$ are
+dummy indices and $g^{\mu \nu} = g^{\nu \mu}$. So we have proved,
+\begin{equation}
+    \Gamma^\mu_{~\mu \alpha} = \left(\log \sqrt{-g}\right)_{,\alpha}.
+\end{equation}
+
+
+\section*{Problem 3}
+
+
+\section*{Problem 4}
+
+
+
+\section*{Problem 5}
+
+
 \end{document}
