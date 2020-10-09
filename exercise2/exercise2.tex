@@ -1,4 +1,33 @@
 \documentclass{article}
-\begin{document}
+\usepackage{amsmath}
 
+\begin{document}
+\section*{Problem 1}
+The metric is given by 
+\begin{equation}
+    ds^2 = (1 + 2V) dt^2 - dx^2 - dy^2 - dz^2.
+\end{equation}
+From the definition of the Christoffel symbols,
+\begin{equation}
+    \Gamma^\mu_{~\rho\sigma} = \frac{1}{2}g^{\mu \nu} 
+    \left(
+    \frac{\partial g_{\nu \sigma}}{\partial x^\rho} 
+    + \frac{\partial g_{\rho \nu}}{\partial x^\sigma} 
+    - \frac{\partial g_{\rho \sigma}}{\partial x^\nu}
+    \right),
+\end{equation}
+we can easily calculate that, for $i=1,2,3$,
+\begin{equation}
+    \Gamma^i_{~00} = -\frac{1}{2} g^{ii} \frac{\partial g_{00}}{\partial x^i}
+    =-\frac{1}{2}(-1)\partial_i(1+2V)
+    =\partial_i V,
+\end{equation}
+\begin{equation}
+    \Gamma^0_{~i0} = \frac{1}{2} g^{00} \frac{\partial g_{00}}{\partial x^i}
+    =\frac{\partial_i V}{1+2V}.
+\end{equation}
+In the weak field limit, $V$ is very small and we have
+\begin{equation}
+    \Gamma^i_{~00} = \Gamma^0_{i0} = \partial_iV.
+\end{equation}
 \end{document}
