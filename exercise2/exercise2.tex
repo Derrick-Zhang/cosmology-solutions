@@ -111,6 +111,58 @@ and the stress energy tensor is given by
    + \frac{1}{2} g_{\alpha \beta} m^2 \phi^2.
 \end{equation}
 \section*{Problem 4}
+We have to show that 
+\begin{equation}
+    \epsilon^{\mu \nu \rho \sigma} \equiv \frac{\varepsilon^{\mu \nu \rho \sigma}}{\sqrt{-g}},
+\end{equation}
+is a tensor.
+First, consider a $4 \times 4$ matirx $M$, and from the definition of $\varepsilon^{\mu\nu\rho\sigma}$
+and the definition of the determinant $\det M$, we have
+\begin{equation}
+    \varepsilon^{\mu \nu \rho \sigma} M^0_\mu M^1_\nu M^2_\rho M^3_\sigma = \det M,
+\end{equation}
+and further,
+\begin{equation}
+    \varepsilon^{\mu \nu \rho \sigma} M^\alpha_\mu M^\beta_\nu M^\gamma_\rho M^\delta_\sigma 
+    = \varepsilon^{\alpha \beta \gamma \delta} \det M.
+\end{equation}
+Now suppose we have two different local coordinates $\{x^\mu\}$ and $\{y^\mu\}$,
+and the Levi Civita symbol in those coordinates is denoted by $\varepsilon$ and $\varepsilon^\prime$,
+metric denoted by $g$ and $g^\prime$.
+We choose $M$ to be the Jacobian $(\partial y/ \partial x)$.
+Then the above equation shows that
+\begin{equation}
+    \varepsilon^{\mu \nu \rho \sigma}\frac{\partial y^\alpha}{\partial x^\mu}
+    \frac{\partial y^\beta}{\partial x^\nu}\frac{\partial y^\gamma}{\partial x^\rho}
+    \frac{\partial y^\delta}{\partial x^\sigma} = \varepsilon^{\prime\alpha \beta \gamma \delta} \det\left(\frac{\partial y}{\partial x}\right).
+\end{equation}
+So $\varepsilon^{\mu \nu \rho \sigma}$ is a tensor density of weight $\omega = 1$. 
+The metric transforms as
+\begin{equation}
+    g_{\mu \nu} = g^\prime_{\alpha \beta} \frac{\partial y^\alpha}{\partial x^\mu}
+    \frac{\partial y^\beta}{\partial x^\nu}.
+\end{equation}
+Therefore, the quare root of the determinant $\sqrt{-g}$ transforms as
+\begin{equation}
+    \sqrt{-g} = \sqrt{-g^\prime} \det\left(\frac{\partial y}{\partial x}\right).
+\end{equation}
+So we have 
+\begin{equation}
+\frac{\varepsilon^{\prime\alpha \beta \gamma \delta}}{\sqrt{-g^\prime}}
+= \frac{\varepsilon^{\mu \nu \rho \sigma}}{\sqrt{-g}}
+\frac{\partial y^\alpha}{\partial x^\mu}
+\frac{\partial y^\beta}{\partial x^\nu}\frac{\partial y^\gamma}{\partial x^\rho}
+\frac{\partial y^\delta}{\partial x^\sigma},
+\end{equation}
+i.e.,
+\begin{equation}
+\epsilon^{\alpha \beta \gamma \delta}
+= \epsilon^{\mu \nu \rho \sigma}
+\frac{\partial y^\alpha}{\partial x^\mu}
+\frac{\partial y^\beta}{\partial x^\nu}\frac{\partial y^\gamma}{\partial x^\rho}
+\frac{\partial y^\delta}{\partial x^\sigma}.
+\end{equation}
+Therefore, $\epsilon^{\mu \nu \rho \sigma}$ is a tensor.
 
 
 

@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1602229828 "/Users/zhanghao/Documents/cosmology-solutions/exercise2/exercise2.tex" "/Users/zhanghao/Documents/cosmology-solutions/exercise2/exercise2.pdf" "exercise2" 1602229829
-  "/Users/zhanghao/Documents/cosmology-solutions/exercise2/exercise2.aux" 1602229829 35 119adba390c232fe18da7b4ccccf66ca ""
-  "/Users/zhanghao/Documents/cosmology-solutions/exercise2/exercise2.tex" 1602229827 4128 5f4959803f99d17c877038b2e15ede58 ""
+["pdflatex"] 1602236317 "/Users/zhanghao/Documents/cosmology-solutions/exercise2/exercise2.tex" "/Users/zhanghao/Documents/cosmology-solutions/exercise2/exercise2.pdf" "exercise2" 1602236319
+  "/Users/zhanghao/Documents/cosmology-solutions/exercise2/exercise2.aux" 1602236318 35 119adba390c232fe18da7b4ccccf66ca ""
+  "/Users/zhanghao/Documents/cosmology-solutions/exercise2/exercise2.tex" 1602236316 6539 9406c13cf2224de896cf888d21747371 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
@@ -13,6 +13,7 @@
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty" 1523134290 2211 ca7ce284ab93c8eecdc6029dc5ccbd73 ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty" 1523134290 4161 7f6eb9092061a11f87d08ed13515b48d ""
   "/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty" 1580683321 85660 baee036978c7a91f4e2bba43f05e5945 ""
@@ -25,11 +26,11 @@
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1586288239 4811913 0be9a7e86c70a26e5e3042966bcd7097 ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1599738782 2432466 06b0e1210b4a1102dc237263766b54ae ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
-  "exercise2.aux" 1602229829 35 119adba390c232fe18da7b4ccccf66ca "pdflatex"
-  "exercise2.tex" 1602229827 4128 5f4959803f99d17c877038b2e15ede58 ""
+  "exercise2.aux" 1602236318 35 119adba390c232fe18da7b4ccccf66ca "pdflatex"
+  "exercise2.tex" 1602236316 6539 9406c13cf2224de896cf888d21747371 ""
   (generated)
   "exercise2.pdf"
-  "/Users/zhanghao/Documents/cosmology-solutions/exercise2/exercise2.pdf"
-  "exercise2.aux"
   "exercise2.log"
+  "/Users/zhanghao/Documents/cosmology-solutions/exercise2/exercise2.pdf"
   "/Users/zhanghao/Documents/cosmology-solutions/exercise2/exercise2.log"
+  "exercise2.aux"
