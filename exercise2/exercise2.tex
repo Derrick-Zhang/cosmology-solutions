@@ -39,7 +39,7 @@ We have to show that
     \label{toprove}
     \Gamma^\mu_{~\mu \alpha} = (\log \sqrt{-g})_{,\alpha}.
 \end{equation}
-The determinant is given by
+The determinant $g$ of the matrix $g_{\mu \nu}$ is given by
 \begin{equation}
     g = \sum_\mu g_{\mu \nu} \Delta^{\mu \nu},
 \end{equation}
@@ -78,8 +78,38 @@ dummy indices and $g^{\mu \nu} = g^{\nu \mu}$. So we have proved,
 
 
 \section*{Problem 3}
-
-
+The action corresponding to the matter field is given by
+\begin{equation}
+    S_{\rm scalar} = \int \sqrt{-g} d^4x \left(
+        \frac{1}{2} g^{\mu \nu} \partial_\mu \phi \partial_\nu \phi
+        -\frac{1}{2}m^2\phi^2
+    \right).
+\end{equation}
+The variation of the action with respect to the metric is given by
+\begin{equation}
+    \frac{\delta S_{\rm scalar}}{\delta g^{\alpha \beta}}
+    = \frac{\delta \sqrt{-g}}{\delta g^{\alpha \beta}} 
+    \left(\frac{1}{2}g^{\mu \nu} \partial_\mu \phi \partial_\nu \phi
+    -\frac{1}{2} m^2\phi^2\right)
+    +\frac{1}{2}\sqrt{-g}\partial_\alpha \phi \partial_\beta \phi.
+\end{equation}
+From equation (9) in the last problem, we have
+\begin{equation}
+    \delta g = g g^{\mu \nu} \delta g_{\mu \nu} = - g g_{\mu \nu}\delta g^{\mu \nu}.
+\end{equation}
+Therefore 
+\begin{equation}
+    \frac{\delta \sqrt{-g}}{\delta g^{\alpha \beta}}
+    = -\frac{1}{2} \frac{1}{\sqrt{-g}} \frac{\delta g}{\delta g^{\alpha \beta}}
+    = -\frac{1}{2} \sqrt{-g} g_{\alpha \beta},
+\end{equation}
+and the stress energy tensor is given by
+\begin{equation}
+   T_{\alpha \beta}=\frac{2}{\sqrt{-g}} \frac{\delta S_{\rm scalar}}{\delta g^{\alpha \beta}}
+   = \partial_\alpha \phi \partial_\beta \phi 
+   - \frac{1}{2} g_{\alpha \beta} g^{\mu \nu} \partial_\mu \phi \partial_\nu \phi
+   + \frac{1}{2} g_{\alpha \beta} m^2 \phi^2.
+\end{equation}
 \section*{Problem 4}
 
 
