@@ -167,6 +167,44 @@ Therefore, $\epsilon^{\mu \nu \rho \sigma}$ is a tensor.
 
 
 \section*{Problem 5}
+The generators of the group $SO(3,1)$ are given by
+\begin{equation}
+    J_{\mu \nu} = x_\mu \partial_\nu -  x_\nu \partial_\mu.
+\end{equation}
+The commutator
+\begin{align}
+    [J_{\mu \nu}, J_{\rho \sigma}] =& [x_\mu \partial_\nu - x_\nu
+    \partial_\mu, x_\rho \partial_\sigma - x_\sigma \partial_\rho]\cr
+    =&[x_\mu \partial_\nu, x_\rho \partial_\sigma]
+    -[x_\mu \partial_\nu, x_\sigma \partial_\rho]
+    -[x_\nu \partial_\mu, x_\rho \partial_\sigma]
+    +[x_\nu\partial_\mu, x_\sigma\partial_\rho].
+\end{align}
+Now we take out one term and try to evaluate it,
+\begin{align}
+    [x_\mu \partial_\nu, x_\rho \partial_\sigma]
+    =&x_\mu \partial_\nu (x_\rho \partial_\sigma)
+    -x_\rho \partial_\sigma(x_\mu \partial_\nu)\cr
+    =&\eta_{\nu \rho}x_\mu\partial_\sigma 
+    - \eta_{\sigma \mu}x_\rho \partial_\nu.
+\end{align}
+Therefore,
+\begin{align}
+    [J_{\mu\nu}, J_{\rho \sigma}] =& \eta_{\nu \rho}x_\mu\partial_\sigma 
+    - \eta_{\sigma \mu}x_\rho \partial_\nu
+    -\eta_{\nu \sigma} x_\mu \partial_\rho 
+    +\eta_{\rho \mu}x_\sigma \partial_\nu\cr
+    &-\eta_{\mu \rho}x_\nu \partial_\sigma
+    +\eta_{\sigma \nu}x_\rho \partial_\mu
+    +\eta_{\mu \sigma}x_\nu \partial_\rho
+    -\eta_{\rho \nu}x_\sigma \partial_\mu\cr
+    =&\eta_{\nu \rho}(x_\mu \partial_\sigma-x_\sigma \partial_\mu)
+    +\eta_{\mu \sigma}(x_\nu \partial_\rho-x_\rho\partial_\mu)\cr
+    &-\eta_{\nu \sigma}(x_\mu \partial_\rho-x_\rho \partial_\mu)
+    -\eta_{\mu \rho}(x_\nu \partial_\sigma - x_\sigma\partial_\nu)\cr
+    =& \eta_{\nu \rho}J_{\mu \sigma} + \eta_{\mu \sigma} J_{\nu \rho}
+    -\eta_{\nu \sigma}J_{\mu \rho}-\eta_{\mu \rho}J_{\nu \sigma}.
+\end{align}
 
 
 \end{document}
