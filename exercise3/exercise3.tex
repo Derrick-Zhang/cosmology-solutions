@@ -53,6 +53,7 @@ Therefore,
 \end{align}
 
 
+
 \section*{Problem 3}
 In the polar coordinates, we have $\vec x = r \hat r$ and
 \begin{equation}
@@ -77,5 +78,32 @@ Also
     =& ~r dr.
 \end{align}
 
+
+
+\section*{Problem 4}
+Pove 
+\begin{equation}
+    (\xi^n)_\alpha^{~\beta} = K^n (x C x)^{n-1} C_{\alpha \rho} x^\rho x^\beta,
+\end{equation}
+by induction, where the matrix $\xi_\alpha^{~\nu} = K C_{\alpha \rho} x^\rho x^\nu$
+and $xCx \equiv C_{\mu \nu} x^\mu x^\nu$.
+
+First,
+\begin{align}
+    (\xi^2)_\alpha^{~\beta} = \xi_\alpha^{~\nu}\xi_\nu^{~\beta} 
+    =&~ K^2 C_{\alpha \rho} x^\rho x^\nu C_{\nu \sigma} x^\sigma x^\beta \cr
+    =&~ K^2 (x C x) C_{\alpha \rho} x^\rho x^\beta.
+\end{align}
+Suppose equation (11) holds for $n-1$,
+\begin{equation}
+    (\xi^{n-1})_\alpha^{~\beta} = K^{n-1} (x C x)^{n-2} C_{\alpha \rho} x^\rho x^\beta,
+\end{equation}
+then,
+\begin{align}
+    (\xi^n)_\alpha^{~\beta} = (\xi ^{n-1})_\alpha^{~\nu} \xi_\nu^{~\beta}
+    =&~ (K^{n-1} (x C x)^{n-2} C_{\alpha \rho} x^\rho x^\nu)
+    (K C_{\nu \sigma} x^\sigma x^\beta)\cr
+    =&~ K^n (x C x)^{n-1} C_{\alpha \rho} x^\rho x^\beta.
+\end{align}
 
 \end{document}
