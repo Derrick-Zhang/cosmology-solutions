@@ -28,6 +28,8 @@ we can easily calculate that,
     = \cot \theta.
 \end{align}
 
+
+
 \section*{Problem 2}
 Given $ds^2 = dx^2 + dy^2 + dz^2$ and for a two-sphere with radius $R$,
 we have
@@ -49,5 +51,31 @@ Therefore,
     ds^2 =& dx^2 + dy^2 + dz^2\cr
     =& R^2 d\theta^2 + R^2 \sin^2 \theta d\phi^2.
 \end{align}
+
+
+\section*{Problem 3}
+In the polar coordinates, we have $\vec x = r \hat r$ and
+\begin{equation}
+x = r \cos \theta, \quad y = r \sin \theta.
+\end{equation}
+Therefore,
+\begin{equation}
+    d \vec x = (dx, dy)
+    = (\cos \theta dr - r\sin \theta d\theta,
+    \sin \theta dr + r \cos \theta d\theta).
+\end{equation}
+And 
+\begin{equation}
+    d\vec x \cdot d \vec x = dx^2 + dy^2 = dr^2 + r^2 d \theta^2.
+\end{equation}
+Also
+\begin{align}
+   \vec x \cdot d \vec x =&~ r \cos^2 \theta dr 
+   - r^2 \sin \theta \cos \theta d\theta
+   + r \sin^2 \theta dr 
+   + r^2 \sin \theta \cos \theta d\theta\cr
+    =& ~r dr.
+\end{align}
+
 
 \end{document}
