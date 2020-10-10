@@ -3,6 +3,51 @@
 
 \begin{document}
 \section*{Problem 1}
+The metric is given by 
+\begin{equation}
+    ds^2 = d\theta^2 +\sin^2\theta d\phi^2.
+\end{equation}
+From the definition of the Christoffel symbols,
+\begin{equation}
+    \Gamma^\mu_{~\rho \sigma} = \frac{1}{2} g^{\mu \nu}
+    \left(
+        \frac{\partial g_{\nu \sigma}}{\partial x^\rho}
+        +\frac{\partial g_{\rho \nu}}{\partial x^\sigma}
+        -\frac{\partial g_{\rho \sigma}}{\partial x^\nu}
+    \right),
+\end{equation}
+we can easily calculate that,
+\begin{align}
+    \Gamma^\theta_{~\phi \phi} =& -\frac{1}{2} g^{\theta \theta} 
+    \frac{\partial g_{\phi \phi}}{\partial \theta}
+    = -\frac{1}{2}\partial_\theta(\sin^2\theta)
+    = -\sin \theta \cos \theta, \cr
+    \Gamma^\phi_{~\theta \phi} = & \frac{1}{2} g^{\phi \phi} 
+    \frac{\partial g_{\phi \phi}}{\partial \theta}
+    = \frac{1}{2}\frac{1}{\sin^2\theta}\partial_\theta(\sin^2\theta)
+    = \cot \theta.
+\end{align}
 
+\section*{Problem 2}
+Given $ds^2 = dx^2 + dy^2 + dz^2$ and for a two-sphere with radius $R$,
+we have
+\begin{equation}
+    \begin{cases}
+        x = R \sin \theta \cos \phi\\
+        y = R \sin \theta \sin \phi\\
+        z = R \cos \theta
+    \end{cases}.
+\end{equation}
+Then,
+\begin{align}
+    dx &= R \cos \theta \cos \phi ~d \theta - R \sin \theta \sin\phi ~d \phi,\cr
+    dy &= R \cos \theta \sin \phi ~d \theta + R \sin \theta \cos \phi ~d \phi, \cr
+    dz &= - R \sin \theta ~d \theta.
+\end{align}
+Therefore,
+\begin{align}
+    ds^2 =& dx^2 + dy^2 + dz^2\cr
+    =& R^2 d\theta^2 + R^2 \sin^2 \theta d\phi^2.
+\end{align}
 
 \end{document}
