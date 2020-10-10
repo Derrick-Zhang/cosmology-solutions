@@ -106,4 +106,63 @@ then,
     =&~ K^n (x C x)^{n-1} C_{\alpha \rho} x^\rho x^\beta.
 \end{align}
 
+
+
+\section*{Problem 5}
+Prove that 
+\begin{equation}
+    R_{\mu \rho} = \partial_\mu \partial_\rho \log \sqrt{-g}
+    -\frac{1}{\sqrt{-g}}\partial_\sigma(\sqrt{-g}~ \Gamma^\sigma_{~\mu \rho})
+    + \Gamma^{\sigma}_{~\mu \alpha} \Gamma^\alpha_{~\rho \sigma}.
+\end{equation}
+From the definition of Ricci tensor, L.H.S. equals
+\begin{equation}
+    R_{\mu \rho} = R^\alpha_{~\mu \rho \alpha}
+    =\Gamma_{~\mu \alpha, \rho}^{\alpha}
+    -\Gamma_{~\mu \rho, \alpha}^{\alpha}
+    +\Gamma_{~\mu \alpha}^{\sigma} \Gamma_{~\sigma \rho}^{\alpha}
+    -\Gamma_{~\mu \rho}^{\sigma} \Gamma_{~\sigma \alpha}^{\alpha}.
+\end{equation}
+Fisrt expand the Christoffel symbol of the form
+\begin{equation}
+    \Gamma^\alpha_{~\mu \alpha} = \frac{1}{2} g^{\alpha \beta}
+    \left(
+        \frac{\partial g_{\alpha \beta}}{\partial x^\mu}
+        +\frac{\partial g_{\mu \beta}}{\partial x^\alpha}
+        -\frac{\partial g_{\mu \alpha}}{\partial x^\beta}
+    \right)
+    =\frac{1}{2} g^{\alpha \beta} \frac{\partial g_{\alpha \beta}}{\partial x^\mu}.
+\end{equation}
+In the last step, the last two terms inside the bracket, when dotted with $g^{\alpha \beta}$,
+gives zero, because they are antisymmetric in $\alpha$, $\beta$, while the metric $g^{\alpha \beta}$
+is symmetric in $\alpha$, $\beta$.
+Now consider 
+\begin{align}
+    \partial_\mu \partial_\rho \log \sqrt{-g} 
+    =&~ \partial_\rho\left(\frac{\partial g_{\alpha \beta}}{\partial x^\mu}
+    \frac{\partial g}{\partial g_{\alpha \beta}}\frac{\partial }{\partial g}
+    (\log \sqrt{-g})\right)\cr
+    =&~ \partial_\rho\left(\frac{\partial g_{\alpha \beta}}{\partial x^\mu}
+    (g g^{\alpha \beta})\left(\frac{1}{2g}\right)\right)\cr
+    =&~ \partial_\rho \left(\frac{1}{2} g^{\alpha \beta}
+    \frac{\partial g_{\alpha \beta}}{\partial x^\mu}\right)
+    = \Gamma^\alpha_{~\mu \alpha, \rho}.
+\end{align}
+Next consider 
+\begin{align}
+    -\frac{1}{\sqrt{-g}} \partial_\sigma(\sqrt{-g} ~\Gamma^\sigma_{~\mu \rho})
+    =&~ -\frac{1}{\sqrt{-g}} \partial_\sigma(\sqrt{-g}) \Gamma^\sigma_{~\mu \rho}
+    -\Gamma^\sigma_{~\mu \rho, \sigma} \cr
+    =&~ -\frac{1}{2} g^{\alpha \beta} \frac{\partial g_{\alpha \beta}}{\partial x^\sigma}
+    \Gamma^\sigma_{~\mu \rho} - \Gamma^\alpha_{~\mu \rho, \alpha}\cr
+    =&~ -\Gamma^\alpha_{~\sigma\alpha} \Gamma^\sigma_{~\mu \rho} - 
+    \Gamma^\alpha_{~\mu\rho,\alpha}.
+\end{align}
+Therefore, R.H.S. of (15) equals
+\begin{equation}
+    \Gamma^\alpha_{~\mu \alpha, \rho} - \Gamma^\alpha_{~\mu \rho, \alpha}
+    + \Gamma^\sigma_{~\mu \alpha} \Gamma^\alpha_{~\rho \sigma} 
+    - \Gamma^\alpha_{~\sigma \alpha} \Gamma^\sigma_{~\mu \rho}.
+\end{equation}
+Compare (16) and (20), we see that equation (15) is proved.
 \end{document}
