@@ -165,4 +165,71 @@ Therefore, R.H.S. of (15) equals
     - \Gamma^\alpha_{~\sigma \alpha} \Gamma^\sigma_{~\mu \rho}.
 \end{equation}
 Compare (16) and (20), we see that equation (15) is proved.
+
+
+
+\section*{Problem 6}
+First consider 
+\begin{align}
+    \partial_\mu \partial_\rho \log \sqrt{-g} =&~ 
+    -\frac{1}{2} \partial_\mu \partial_\rho \log(1-K(xCx))
+    = \partial_\mu\left(\frac{K C_{\rho \sigma} x^\sigma}{1-K(xCx)}\right)\cr
+    =&~ \frac{KC_{\rho \mu}(1-K(xCx))+2K^2C_{\mu \nu}C_{\rho \sigma}x^\nu x^\sigma}
+    {(1-K(xCx))^2}\cr
+    =&~ \frac{KC_{\rho \mu}}{1-K(xCx)}
+    + \frac{2K^2C_{\mu \nu}C_{\rho \sigma} x^\nu x^\sigma}{(1-K(xCx))^2}\cr
+    =&~\frac{K}{1-K(xCx)}g_{\mu \rho}
+    +\frac{K^2}{(1-K(xCx))^2}C_{\mu \alpha}C_{\rho \beta} x^\alpha x^\beta.
+\end{align}
+Next consider in $N$ dimensional spacetime,
+\begin{align}
+    &-\frac{1}{\sqrt{-g}}\partial_\alpha(\sqrt{-g} ~\Gamma^\alpha_{~\mu \rho})
+    =\partial_\alpha\left(\frac{1}{\sqrt{-g}}\right)\sqrt{-g}~\Gamma^\alpha_{~\mu \rho}
+    -\partial_\alpha \Gamma^\alpha_{~\mu \rho} \cr
+    =&\partial_\alpha (\sqrt{1-K(xCx)})
+    \frac{K x^\alpha g_{\mu \rho}}{\sqrt{1-K(xCx)}}
+    -\partial_\alpha (K x^\alpha g_{\mu \rho})\cr
+    =&-\frac{K^2(xCx)}{1-K(xCx)}g_{\mu \rho}
+    -K\partial_\alpha(x^\alpha) g_{\mu \rho} - K x^\alpha \partial_\alpha g_{\mu \rho}\cr
+    =&-\frac{K^2(xCx)}{1-K(xCx)}g_{\mu \rho}
+    -K \delta^\alpha_\alpha g_{\mu \rho}\cr
+    &- Kx^\alpha \left(
+        \frac{K C_{\mu \alpha}C_{\rho \beta}x^\beta + K C_{\rho \alpha}C_{\mu \beta}x^\beta}
+        {1-K(xCx)} + \frac{2K^2 C_{\mu \nu} C_{\rho \sigma} C_{\alpha \beta}x^\nu x^\sigma x^\beta}
+        {(1-K(xCx))^2}
+    \right)\cr
+    =&-\frac{K^2(xCx)}{1-K(xCx)}g_{\mu \rho}
+    -K N g_{\mu \rho} - \frac{2K^2 }{(1-K(xCx))^2}C_{\mu \alpha}C_{\rho \beta}x^\alpha x^\beta
+\end{align}
+Then consider
+\begin{align}
+    \Gamma^\sigma_{~\mu \alpha} \Gamma^\alpha_{~\rho \sigma}
+    =&~ K^2 x^\sigma x^\alpha g_{\mu \alpha} g_{\rho \sigma}\cr
+    =&~ K^2 x^\sigma x^\alpha 
+    \left(
+        C_{\mu \alpha} + \frac{K C_{\mu \nu} C_{\alpha\beta}x^\nu x^\beta}
+        {1-K(xCx)}
+    \right)
+    \left(
+        C_{\rho \sigma} + \frac{K C_{\rho \nu} C_{\sigma\beta}x^\nu x^\beta}
+        {1-K(xCx)}
+    \right)\cr
+    =&~ K^2 C_{\mu \alpha} C_{\rho \sigma} x^\alpha x^\sigma
+    + \frac{2K^3(xCx) C_{\rho\alpha}C_{\mu \beta}x^\alpha x^\beta}
+    {1-K(xCx)}\cr
+    &+ \frac{K^4 (xCx)^2 C_{\rho \alpha } C_{\mu \beta}x^\alpha x^\beta}
+    {(1-K(xCx))^2}\cr
+    =&~\left(
+        K^2 + \frac{2K^3 (xCx)}{1-K(xCx)} + \frac{K^4(xCx)^2}{(1-K(xCx))^2}
+    \right)
+    C_{\mu \alpha}C_{\rho \beta}x^\alpha x^\beta \cr
+    =&~ \frac{K^2}{(1-K(xCx))^2}
+    C_{\mu \alpha}C_{\rho \beta}x^\alpha x^\beta.
+\end{align}
+Now add them up and we obtain
+\begin{equation}
+    R_{\mu \rho} = \frac{K}{1-K(xCx)}g_{\mu \rho}
+    -\frac{K^2(xCx)}{1-K(xCx)}g_{\mu \rho}
+    -K N g_{\mu \rho} = K(1-N)g_{\mu \rho}.
+\end{equation}
 \end{document}
